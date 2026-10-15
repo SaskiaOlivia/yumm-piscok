@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yumm! Piscok</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a href="#beranda" class="logo">Yumm! <span>Piscok</span></a>
+  <button id="menuToggle" class="menu-toggle">☰</button>
+  <nav id="mainNav">
+    <a href="#beranda">Beranda</a>
+    <a href="#menu">Menu</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#ulasan">Ulasan</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+</header>
+
+<section class="hero" id="beranda">
+  <div class="hero-text">
+    <p class="label">♡ CAMILAN MANIS SETIAP HARI</p>
+    <h1>Gigitan kecil,<br><span>bahagia besar!</span></h1>
+    <p>Piscok lezat untuk menemani hari-harimu.
+       Yuk, pilih varian favoritmu!</p>
+    <a href="#menu" class="btn">Lihat Menu ↗</a>
+  </div>
+  <div class="hero-image">
+    <img src="assets/produk7.jpg" alt="Spanduk Yumm Piscok">
+  </div>
+</section>
+
+<section class="section" id="menu">
+  <div class="heading">
+    <p class="label">MENU FAVORIT</p>
+    <h2>Pilih Piscok <span>Kesukaanmu</span></h2>
+    <p>Manis, lezat, dan cocok untuk teman santai.</p>
+  </div>
+
+  <div class="products">
+    <article class="card">
+      <img src="assets/produk1.jpg" alt="Piscok cokelat">
+      <div class="card-content">
+        <h3>Piscok Cokelat</h3>
+        <p>Pisang dan cokelat yang manis.</p>
+        <div class="card-bottom">
+          <strong>Rp5.000</strong>
+          <button class="add-button"
+            data-product="Piscok Cokelat">+</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="assets/produk2.jpg" alt="Piscok spesial">
+      <div class="card-content">
+        <h3>Piscok Spesial</h3>
+        <p>Camilan lezat untuk waktu santai.</p>
+        <div class="card-bottom">
+          <strong>Rp6.000</strong>
+          <button class="add-button"
+            data-product="Piscok Spesial">+</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="assets/produk3.jpg" alt="Piscok matcha">
+      <div class="card-content">
+        <h3>Piscok Matcha</h3>
+        <p>Varian rasa dengan sensasi berbeda.</p>
+        <div class="card-bottom">
+          <strong>Rp6.000</strong>
+          <button class="add-button"
+            data-product="Piscok Matcha">+</button>
+        </div>
+      </div>
+    </article>
+  </div>
+  <p class="note">Harga dapat disesuaikan dengan harga jualmu.</p>
+</section>
+
+<section class="order-section" id="pesan">
+  <div>
+    <p class="label">PESAN SEKARANG</p>
+    <h2>Ngemil enak,<br><span>gampang banget!</span></h2>
+    <p>Pilih produk dan jumlah pesananmu.</p>
+  </div>
+
+  <div class="order-card">
+    <label for="orderProduct">Pilih produk</label>
+    <select id="orderProduct">
+      <option value="Piscok Cokelat" data-price="5000">
+        Piscok Cokelat — Rp5.000
+      </option>
+      <option value="Piscok Spesial" data-price="6000">
+        Piscok Spesial — Rp6.000
+      </option>
+      <option value="Piscok Matcha" data-price="6000">
+        Piscok Matcha — Rp6.000
+      </option>
+    </select>
+
+    <label for="quantity">Jumlah</label>
+    <div class="quantity">
+      <button type="button" id="minusQty">−</button>
+      <input id="quantity" type="number" min="1" max="99" value="1">
+      <button type="button" id="plusQty">+</button>
+    </div>
+
+    <div class="total">
+      <span>Total harga</span>
+      <strong id="totalPrice">Rp5.000</strong>
+    </div>
+
+    <button class="btn order-button" id="orderButton">
+      Pesan via WhatsApp ↗
+    </button>
+  </div>
+</section>
+
+<section class="section" id="galeri">
+  <div class="heading">
+    <p class="label">OUR MOMENTS</p>
+    <h2>Galeri <span>Yumm!</span></h2>
+    <p>Intip foto-foto produk kami.</p>
+  </div>
+
+  <div class="gallery">
+    <img src="assets/produk4.jpg" alt="Galeri piscok 1" loading="lazy">
+    <img src="assets/produk5.jpg" alt="Galeri piscok 2" loading="lazy">
+    <img src="assets/produk6.jpg" alt="Galeri piscok 3" loading="lazy">
+  </div>
+</section>
+
+<section class="section reviews" id="ulasan">
+  <div class="heading">
+    <p class="label">KATA PELANGGAN</p>
+    <h2>Ulasan <span>Mereka</span></h2>
+  </div>
+
+  <form id="reviewForm" class="review-form">
+    <label for="reviewName">Nama kamu</label>
+    <input id="reviewName" maxlength="40"
+      placeholder="Masukkan nama" required>
+
+    <label for="reviewRating">Rating</label>
+    <select id="reviewRating">
+      <option value="5">★★★★★ — Suka banget</option>
+      <option value="4">★★★★☆ — Suka</option>
+      <option value="3">★★★☆☆ — Cukup</option>
+      <option value="2">★★☆☆☆ — Kurang</option>
+      <option value="1">★☆☆☆☆ — Tidak cocok</option>
+    </select>
+
+    <label for="reviewText">Komentar</label>
+    <textarea id="reviewText" rows="3" maxlength="300"
+      placeholder="Tulis komentarmu..." required></textarea>
+
+    <button class="btn" type="submit">Kirim Ulasan</button>
+  </form>
+  
+<div id="reviewsList" class="reviews-list">
+  <article class="review-card">
+    <div class="comment-top">
+      <div class="avatar">B</div>
+      <div class="comment-user">
+        <strong>Bubud</strong>
+        <small>Pelanggan Yumm! Piscok</small>
+      </div>
+      <span class="verified">Pembeli</span>
+    </div>
+    <div class="stars">★★★★★</div>
+    <p>Enak bangettt, cokelatnya lumer dan tampilannya lucu! 💜</p>
+    <small class="comment-date">Baru saja</small>
+  </article>
+
+  <article class="review-card">
+    <div class="comment-top">
+      <div class="avatar">S</div>
+      <div class="comment-user">
+        <strong>Salsa</strong>
+        <small>Pelanggan Yumm! Piscok</small>
+      </div>
+      <span class="verified">Pembeli</span>
+    </div>
+    <div class="stars">★★★★★</div>
+    <p>Piscoknya enak buat ngemil. Packaging-nya juga menarik!</p>
+    <small class="comment-date">Baru saja</small>
+  </article>
+
+  <article class="review-card">
+    <div class="comment-top">
+      <div class="avatar">N</div>
+      <div class="comment-user">
+        <strong>Nadia</strong>
+        <small>Pelanggan Yumm! Piscok</small>
+      </div>
+      <span class="verified">Pembeli</span>
+    </div>
+    <div class="stars">★★★★★</div>
+    <p>Suka banget sama varian ungunya, semoga makin banyak rasa baru! ✨</p>
+    <small class="comment-date">Baru saja</small>
+  </article>
+</div
+  <p class="note">Ulasan tersimpan di browser yang digunakan.</p>
+</section>
+
+<section class="contact" id="kontak">
+  <div>
+    <p class="label">CONTACT US</p>
+    <h2>Yuk, pesan <span>Yumm!</span></h2>
+    <p>Buka setiap hari, pukul 08.00–15.00 WIB.</p>
+    <a class="btn light"
+      href="https://maps.app.goo.gl/PCrQUGfZ5yxHXYDM9"
+      target="_blank" rel="noopener">Lihat Lokasi ↗</a>
+  </div>
+
+  <div class="contact-card">
+    <a href="https://wa.me/628576311757">
+      <b>WhatsApp</b><span>+62 8576 6311 757</span>
+    </a>
+    <a href="mailto:saskiaolivia0410@gmail.com">
+      <b>Email</b><span>saskiaolivia0410@gmail.com</span>
+    </a>
+    <a href="https://instagram.com/saskiiaolivia?obrf=MnRtamh6djM5c244"
+      target="_blank" rel="noopener">
+      <b>Instagram</b><span>@saskiiaolivia</span>
+    </a>
+    <div><b>Jam buka</b><span>Setiap hari · 08.00–15.00 WIB</span></div>
+  </div>
+</section>
+
+<footer>
+  <a href="#beranda" class="logo">Yumm! <span>Piscok</span></a>
+  <p>Manisnya bikin hari lebih ceria ♡</p>
+  <small>© <span id="year"></span> Yumm! Piscok</small>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>l

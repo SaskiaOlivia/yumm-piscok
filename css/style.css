@@ -1,0 +1,741 @@
+:root {
+  --ungu: #9672b8;
+  --ungu-gelap: #674785;
+  --ungu-muda: #f2eafa;
+  --putih: #ffffff;
+  --teks: #35283e;
+  --abu: #83768d;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--teks);
+  background: white;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+span {
+  color: var(--ungu);
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid #eee5f5;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.navbar nav a {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.navbar nav a:hover {
+  color: var(--ungu);
+}
+
+.menu-toggle {
+  display: none;
+  padding: 5px 12px;
+  background: var(--ungu-muda);
+  border: none;
+  border-radius: 8px;
+  font-size: 22px;
+  color: var(--ungu-gelap);
+}
+
+.hero {
+  min-height: 540px;
+  padding: 70px 9%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 45px;
+  background: linear-gradient(120deg, #fff, #f0e5fa, #fff);
+}
+
+.hero-text h1 {
+  font-size: clamp(38px, 5vw, 65px);
+  line-height: 1.2;
+  margin: 20px 0;
+}
+
+.hero-text p {
+  color: var(--abu);
+  max-width: 470px;
+  margin-bottom: 22px;
+}
+
+.label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: var(--ungu);
+  margin-bottom: 10px;
+}
+
+.hero-image {
+  padding: 12px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 20px 55px #77529320;
+}
+
+.hero-image img {
+  width: 100%;
+  max-height: 390px;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: 12px;
+  padding: 13px 22px;
+  color: white;
+  background: linear-gradient(135deg, #aa8aca, #79539c);
+  font-weight: bold;
+  font-size: 13px;
+  box-shadow: 0 8px 20px #9672b833;
+  transition: .2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px #9672b844;
+}
+
+.section {
+  padding: 85px 8%;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.heading h2,
+.order-section h2,
+.contact h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.heading > p:last-child {
+  color: var(--abu);
+  font-size: 14px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  overflow: hidden;
+  background: white;
+  border: 1px solid #eee4f5;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px #5b3d7510;
+  transition: .25s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px #5b3d7520;
+}
+
+.card > img {
+  width: 100%;
+  height: 240px;
+  padding: 12px;
+  object-fit: contain;
+  background: linear-gradient(135deg, #faf6fd, #eee2f8);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 19px;
+  margin-bottom: 5px;
+}
+
+.card-content p {
+  color: var(--abu);
+  font-size: 13px;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid #eee5f5;
+}
+
+.card-bottom strong {
+  color: var(--ungu-gelap);
+  font-size: 18px;
+}
+
+.add-button {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 12px;
+  background: var(--ungu);
+  color: white;
+  font-size: 24px;
+}
+
+.note {
+  color: var(--abu);
+  font-size: 11px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.order-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  padding: 75px 12%;
+  background: linear-gradient(120deg, #eee3f8, #fff, #f3eafa);
+}
+
+.order-section > div:first-child > p:last-child {
+  color: var(--abu);
+}
+
+.order-card {
+  padding: 28px;
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 15px 45px #62437f18;
+}
+
+.order-card label,
+.review-form label {
+  display: block;
+  margin: 15px 0 7px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.order-card select,
+.review-form input,
+.review-form select,
+.review-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e5d8ef;
+  border-radius: 10px;
+  background: white;
+  color: var(--teks);
+  outline: none;
+}
+
+.order-card select:focus,
+.review-form input:focus,
+.review-form select:focus,
+.review-form textarea:focus {
+  border-color: var(--ungu);
+}
+
+.quantity {
+  display: flex;
+  width: 155px;
+  overflow: hidden;
+  border: 1px solid #e5d8ef;
+  border-radius: 10px;
+}
+
+.quantity button {
+  width: 42px;
+  border: none;
+  background: var(--ungu-muda);
+  color: var(--ungu-gelap);
+  font-size: 22px;
+}
+
+.quantity input {
+  width: 70px;
+  min-width: 0;
+  border: none;
+  text-align: center;
+  outline: none;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 22px 0;
+  padding-top: 18px;
+  border-top: 1px dashed #d9c6e8;
+}
+
+.total strong {
+  color: var(--ungu-gelap);
+  font-size: 21px;
+}
+
+.order-button {
+  width: 100%;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  padding: 8px;
+  border-radius: 18px;
+  background: #f4ebfa;
+  transition: .25s;
+}
+
+.gallery img:hover {
+  transform: scale(1.02);
+}
+
+.reviews {
+  background: #faf6fd;
+}
+
+.review-form {
+  max-width: 650px;
+  margin: auto;
+  padding: 28px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 10px 35px #62437f10;
+}
+
+.review-form textarea {
+  resize: vertical;
+}
+
+.review-form .btn {
+  margin-top: 18px;
+}
+
+.reviews-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  max-width: 850px;
+  margin: 25px auto 0;
+}
+
+.review-card {
+  padding: 18px;
+  border-radius: 14px;
+  background: white;
+  border: 1px solid #eee4f5;
+  overflow-wrap: anywhere;
+}
+
+.review-card strong {
+  display: block;
+}
+
+.review-card .stars {
+  color: var(--ungu);
+  letter-spacing: 2px;
+}
+
+.review-card p {
+  margin-top: 8px;
+  color: var(--abu);
+  font-size: 13px;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+  padding: 75px 10%;
+  color: white;
+  background: linear-gradient(130deg, #9873b8, #684583);
+}
+
+.contact .label,
+.contact h2 span {
+  color: #eadcf7;
+}
+
+.contact > div:first-child > p:not(.label) {
+  color: #f0e6f8;
+  margin-bottom: 25px;
+}
+
+.light {
+  color: var(--ungu-gelap);
+  background: white;
+}
+
+.contact-card {
+  padding: 18px 25px;
+  border-radius: 20px;
+  background: white;
+  color: var(--teks);
+}
+
+.contact-card a,
+.contact-card > div {
+  display: block;
+  padding: 16px 0;
+  border-bottom: 1px solid #eee5f5;
+}
+
+.contact-card a:last-child {
+  border-bottom: none;
+}
+
+.contact-card b,
+.contact-card span {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.contact-card b {
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+.contact-card span {
+  color: var(--abu);
+  font-size: 12px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 25px 8%;
+  background: #fbf9fd;
+}
+
+footer p,
+footer small {
+  color: var(--abu);
+  font-size: 12px;
+}
+
+/* Tampilan laptop dan tablet */
+@media (max-width: 900px) {
+  .navbar { padding: 16px 5%; }
+  .navbar nav { gap: 14px; }
+  .hero { padding: 55px 6%; gap: 25px; }
+  .section { padding: 70px 6%; }
+  .products { gap: 14px; }
+  .card > img { height: 200px; }
+  .order-section, .contact {
+    padding: 60px 7%;
+    gap: 28px;
+  }
+}
+
+/* Tampilan HP */
+@media (max-width: 650px) {
+  .navbar { padding: 13px 5%; }
+  .logo { font-size: 20px; }
+
+  .menu-toggle { display: block; }
+
+  .navbar nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 15px 6%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: white;
+    border-top: 1px solid #eee5f5;
+    box-shadow: 0 12px 20px #62437f12;
+  }
+
+  .navbar nav.open { display: flex; }
+  .navbar nav a { padding: 10px 0; }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 48px 6%;
+    gap: 30px;
+  }
+
+  .hero-text > p:not(.label) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-image { max-width: 500px; margin: auto; }
+  .hero-image img { max-height: 300px; }
+
+  .section { padding: 55px 6%; }
+
+  .products { grid-template-columns: 1fr; max-width: 420px; margin: auto; }
+  .card > img { height: 260px; }
+
+  .order-section,
+  .contact {
+    grid-template-columns: 1fr;
+    padding: 55px 6%;
+    gap: 25px;
+  }
+
+  .gallery { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .gallery img { height: 190px; }
+  .reviews-list { grid-template-columns: 1fr; }
+  .review-form { padding: 20px; }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 6%;
+  }
+}
+}
+/* Tampilan komentar pelanggan */
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 650px;
+  margin: 25px auto 0;
+}
+
+.review-card {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #eee3f7;
+  border-radius: 18px;
+  box-shadow: 0 7px 22px #62437f0d;
+}
+
+.comment-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d9c3ee, #9672b8);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.comment-user {
+  flex: 1;
+  min-width: 0;
+}
+
+.comment-user strong,
+.comment-user small {
+  display: block;
+}
+
+.comment-user strong {
+  font-size: 14px;
+}
+
+.comment-user small,
+.comment-date {
+  color: #9688a0;
+  font-size: 11px;
+}
+
+.verified {
+  padding: 4px 8px;
+  border-radius: 20px;
+  background: #f2eafa;
+  color: #805a9f;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.review-card .stars {
+  color: #f0b746;
+  letter-spacing: 3px;
+  margin-bottom: 7px;
+}
+
+.review-card p {
+  color: #574b60;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0 0 10px;
+}
+
+@media (max-width: 650px) {
+  .reviews-list {
+    width: 100%;
+  }
+
+  .review-card {
+    padding: 16px;
+  }
+}
+/* Tampilan komentar pelanggan */
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 650px;
+  margin: 25px auto 0;
+}
+
+.review-card {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #eee3f7;
+  border-radius: 18px;
+  box-shadow: 0 7px 22px #62437f0d;
+}
+
+.comment-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d9c3ee, #9672b8);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.comment-user {
+  flex: 1;
+  min-width: 0;
+}
+
+.comment-user strong,
+.comment-user small {
+  display: block;
+}
+
+.comment-user strong {
+  font-size: 14px;
+}
+
+.comment-user small,
+.comment-date {
+  color: #9688a0;
+  font-size: 11px;
+}
+
+.verified {
+  padding: 4px 8px;
+  border-radius: 20px;
+  background: #f2eafa;
+  color: #805a9f;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.review-card .stars {
+  color: #f0b746;
+  letter-spacing: 3px;
+  margin-bottom: 7px;
+}
+
+.review-card p {
+  color: #574b60;
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0 0 10px;
+}
+
+@media (max-width: 650px) {
+  .reviews-list {
+    width: 100%;
+  }
+
+  .review-card {
+    padding: 16px;
+  }
+}
